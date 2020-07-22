@@ -8,7 +8,7 @@
     "posttest": "npm run --prefix todomvc reset:db",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
-    "start": "npm start --prefix todomvc -- --quiet",
+    "start": "npm start --prefix todomvc --",
     "start:react": "http-server --silent -p 3000 -c-1 todomvc-react",
     "ci": "start-test 3000",
     "dev": "start-test 3000 cy:open",
