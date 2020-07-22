@@ -23,3 +23,17 @@
 //
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('createTodo', todo => {
+  cy.get('.new-todo').type(`${todo}{enter}`)
+})
+
+Cypress.Commands.add('toggleFirstTodo', () => {
+  cy.get('.toggle')
+    .first()
+    .click()
+})
+
+Cypress.Commands.add('getBySel', selector => {
+  return cy.get(`[data-cy=${selector}]`)
+})
